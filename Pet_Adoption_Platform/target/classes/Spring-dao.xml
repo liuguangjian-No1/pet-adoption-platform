@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--引入数据库的配置文件-->
+    <context:property-placeholder location="classpath:db.properties" system-properties-mode="FALLBACK" />
+
+    <!--导入Druid的数据库连接池-->
+    <bean id="source" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxTotal}"/>
+        <property name="initialSize" value="${jdbc.initPoolSize}"/>
+        <property name="loginTimeout" value="3000"/>
+    </bean>
+
+    <!--配置SqlSessionFactory的工厂类-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--引入MyBatis的配置文件-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <!--导入数据源-->
+        <property name="dataSource" ref="source"/>
+        <!--导入mapper文件-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--扫描mapper包-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--mapper对象的注册-->
+        <property name="basePackage" value="com.jxau.mapper"/>
+    </bean>
+</beans>
