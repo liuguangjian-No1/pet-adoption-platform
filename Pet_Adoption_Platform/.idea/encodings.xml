@@ -2,6 +2,23 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/AjaxLoader.gif" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/btn-attach.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/btn-setting.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/btn-shuffle.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/btn-tool.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/divice-pagenations.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/grabbing.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-arrow-black.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-gallery-edit.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-gallery-trash.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-mail.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-phone.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-table-delete.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-table-edit.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/ico-table-new.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/lens.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/skin-nav-bullets.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js/houtai/css/style.css" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>

@@ -19,7 +19,6 @@ public class AdminLogin {
     @RequestMapping("login.action")
     public String login(Admin admin, Model model, HttpServletRequest request){
         Admin admin1 = adminService.loginAdmin(admin);
-        System.out.println(admin1);
         if(admin1!=null){
             request.getSession().setAttribute("admin",admin1);
             return "redirect:/animal/admin/admin.jsp";

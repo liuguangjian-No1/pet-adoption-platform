@@ -45,7 +45,7 @@ public class BlogController {
     public String getBlogs(ModelAndView modelAndView){
         List<Blog> blogs = blogService.getBlogs();
         modelAndView.addObject("blogs",blogs);
-        return "blog";
+        return "user/blog";
     }
 
     @RequestMapping("create.action")

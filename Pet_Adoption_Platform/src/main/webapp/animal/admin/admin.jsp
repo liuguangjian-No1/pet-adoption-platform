@@ -189,6 +189,7 @@
                         </tr>
                         </thead>
                         <tbody style="text-align: center">
+
                         </tbody>
                     </table>
                     <div class="col-md-12 text-right">
@@ -570,7 +571,7 @@
         $(ele).find(".help-block").text("");
     }
 
-    //点击新增按钮弹出模态框。
+    //点击新增按钮弹出模态框。'
     $("#admin_add_modal_btn").click(function () {
         //清除表单数据（表单完整重置（表单的数据，表单的样式））
         reset_form("#newAdmin form");
@@ -607,6 +608,7 @@
         //清除表单数据（表单完整重置（表单的数据，表单的样式））
         reset_form("#editAdmin form");
         var id = $(this).attr("edit-id");
+
         $.ajax({
             url: "${pageContext.request.contextPath}/admin/findById.action?id=" + id,
             type: "GET",

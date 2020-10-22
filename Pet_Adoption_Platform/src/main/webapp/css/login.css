@@ -46,7 +46,7 @@ ul, li {
 }
 
 .loginbox {
-    background: url(http://localhost:8080/web/images/login/tmbg-white.png);
+    background: url(../images/login/tmbg-white.png);
     border: 0px;
 }
 

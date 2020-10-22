@@ -5,6 +5,8 @@ com\jxau\entity\Comment.class
 com\jxau\mapper\AdminMapper.class
 com\jxau\mapper\PetMapper.class
 com\jxau\entity\Apply.class
+com\jxau\entity\Product.class
+com\jxau\entity\Pro_order.class
 com\jxau\mapper\BlogMapper.class
 com\jxau\controller\BlogController.class
 com\jxau\controller\UsersController.class

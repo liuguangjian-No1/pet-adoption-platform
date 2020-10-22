@@ -129,6 +129,6 @@ public class UsersController {
     @RequestMapping("logout.action")
     public String logout(HttpServletRequest request, HttpServletResponse response){
         request.getSession().invalidate();
-        return "redirect:/animal/index.jsp";
+        return "redirect:/animal/user/index.jsp";
     }
 }

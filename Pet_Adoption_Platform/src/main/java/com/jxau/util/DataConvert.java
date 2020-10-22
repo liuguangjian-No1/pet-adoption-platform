@@ -8,10 +8,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-/**
- * @author 那年
- */
 public class DataConvert implements Converter<String,Date> {
 
     @Override

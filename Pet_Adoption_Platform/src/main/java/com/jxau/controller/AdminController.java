@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
 import java.util.List;
 
@@ -105,7 +107,10 @@ public class AdminController {
 
 
     @RequestMapping("logout.action")
-    public String logout(){
+    public String logout(HttpSession session){
+
+        Object admin = session.getAttribute("admin");
+        session.removeAttribute("admin");
         return "admin/login";
     }
 

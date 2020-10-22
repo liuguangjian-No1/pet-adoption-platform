@@ -44,12 +44,9 @@
                                 <div id="v_container" style="width: 100px;height: 45px;" class="passcode"></div>
                             </div>
                         </div>
-                        <div style="padding:30px;">
-                            <input type="submit" id="button" class="button button-block bg-main text-big input-big"
-                                   value="登录"><br/>
-                            <a href="${pageContext.request.contextPath}/animal/index.jsp"
-                               style="text-decoration: none;font-size: 16px;">返回首页</a>
-                        </div>
+                        <button id="button" class="button button-block bg-main text-big input-big" >登录</button><br/>
+                        <a href="${pageContext.request.contextPath}/animal/user/index.jsp"
+                           style="text-decoration: none;font-size: 14px;text-align: left">返回首页</a>
                     </div>
                 </div>
             </form>
@@ -58,18 +55,39 @@
 </div>
 </body>
 <script src="${pageContext.request.contextPath}/js/gVerify.js"></script>
+<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.js "></script>
 <script>
 
     var verifyCode = new GVerify("v_container");
-    document.getElementById("button").onclick = function () {
 
-        /*获取inputi面的值*/
-        var res = verifyCode.validate(document.getElementById("code_input").value);
-        if (!res) {
-            alert("验证码错误");
+    $("#button").click(function () {
+        // var res = verifyCode.validate(document.getElementById("code_input").value);
+
+        var adminName = $("#name").val();
+        var adminPwd = $("#password").val();
+        var code = $("#code_input").val();
+
+        if (adminName == "") {
+            // $("#name").val("请输入账号!");
+            $("#name").attr("placeholder","请输入账号!");
+            $("#name").css('background-color', '#FFE14A');
+        }
+        if (adminPwd == "") {
+            // $("#password").val("请输入密码!");
+            $("#password").attr("placeholder","请输入密码!");
+            $("#password").css('background-color', '#FFE14A');
+        }
+        if (!verifyCode.validate(code)) {
+            // $("#code_input").val("请正确输入验证码！");
+            $("#code_input").attr("placeholder","请正确输入验证码!");
+            $("#code_input").css('background-color', '#ffe14a');
             return false;
         }
-    }
+        /* if (!res) {
+             alert("验证码错误");
+             return false;
+         }*/
+    })
 
 </script>
 
