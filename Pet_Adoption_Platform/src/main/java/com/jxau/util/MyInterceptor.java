@@ -17,20 +17,26 @@ public class MyInterceptor implements HandlerInterceptor {
         System.out.println("preHandle方法执行");
 
         String requestUri = request.getRequestURI();
-        if (requestUri.indexOf("/login") >= 0 || requestUri.indexOf("/animal/*.jsp") > 0 || requestUri.indexOf("/.action") > 0) {
+
+        System.out.println("111111111111111111111111");
+        if (requestUri.indexOf("/login") >= 0 || requestUri.indexOf("/animal/user/*.jsp") > 0 || requestUri.indexOf("/.action") > 0 ||requestUri.indexOf("/user/index") > 0) {
+            System.out.println("22222222222222222222222222");
+            System.out.println("requestUri=      "+requestUri);
             return true;
         }
 
         Admin admin = (Admin) request.getSession().getAttribute("admin");
-
-        if (admin != null) {
-            return true;
-        }else{
-            request.setAttribute("msg", "你还没有登录，请先登录！");
-            //response.sendRedirect("animal/admin/login.jsp");
-            request.getRequestDispatcher("/animal/admin/login.jsp").forward(request, response);
-            return false;
+        if(requestUri.indexOf("/animal/admin/*.jsp") >= 0){
+            if (admin != null) {
+                return true;
+            }else{
+                request.setAttribute("msg", "你还没有登录，请先登录！");
+                //response.sendRedirect("animal/admin/login.jsp");
+                request.getRequestDispatcher("/animal/admin/login.jsp").forward(request, response);
+                return false;
+            }
         }
+       return false;
     }
 
     /**

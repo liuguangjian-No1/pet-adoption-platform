@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>宠物领养管理后台</title>
     <!-- 引入css样式文件 -->
     <!-- Bootstrap Core CSS -->
@@ -15,108 +17,29 @@
     <link href="${pageContext.request.contextPath}/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
     <style>
-        .panel-heading{background-color: #337ab7;border-color: #2e6da4;font-size:14px;padding-left:20px;height:36px;line-height:36px;color:white;position:relative;cursor:pointer;}/*转成手形图标*/
-        .panel-heading span{position:absolute;right:10px;top:12px;}
+        .panel-heading {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            font-size: 14px;
+            padding-left: 20px;
+            height: 36px;
+            line-height: 36px;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /*转成手形图标*/
+        .panel-heading span {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
     </style>
 </head>
 <body>
 <div id="wrapper">
-    <!-- 导航栏部分 -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="" style="font-size: 24px">流浪猫狗管理系统</a>
-        </div>
-        <!-- 导航栏右侧图标部分 -->
-        <!-- 导航栏右侧图标部分 -->
-        <ul class="nav navbar-top-links navbar-right">
-            <!-- 消息通知 end -->
-            <!-- 用户信息和系统设置 start -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="${pageContext.request.contextPath}/admin/developing">
-                    <i class="fa fa-user fa-fw"></i>
-                    <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user ">
-                    <li>
-                        <input type="hidden" id = "currentAdminId" value="${admin.id}">
-                    </li>
-                    <li><a href="${pageContext.request.contextPath}/admin/developing"><i class="fa fa-user fa-fw"></i>
-                        管理员：${admin.adminName}</a>
-                    </li>
-                    <li><a href="${pageContext.request.contextPath}/admin/developing"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/admin/logout.action">
-                            <i class="fa fa-sign-out fa-fw"></i>退出登录
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- 用户信息和系统设置结束 -->
-        </ul> <!-- 左侧显示列表部分 start-->
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <!-- 教学管理  折叠的分组列表 -->
-                <div class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse"
-                     data-target="#collapseListGroup3" role="tab">
-                    <h4 class="panel-title">
-                        后台管理 <span class="fa fa-chevron-up right"></span>
-                    </h4>
-                </div>
-                <div id="collapseListGroup3" class="panel-collapse collapse in" role="tabpanel"
-                     aria-labelledby="collapseListGroupHeading3">
-                    <ul class="list-group">
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/users.jsp">
-                                <i class="fa fa-flash fa-fw"></i> 用户信息
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/admin.jsp">
-                                <i class="fa fa-flash fa-fw"></i> 管理员信息
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/pet.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 宠物管理
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/adopt.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 领养管理
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/comment.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 评论管理
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/blog.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 团队活动管理
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/apply.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 志愿者的申请
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/agree.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 同意领养列表
-                            </a>
-                        </li>
-                        <li class="list-group-item my_font">
-                            <a href="${pageContext.request.contextPath}/animal/admin/disAgree.jsp">
-                                <i class="fa fa-sitemap fa-fw"></i> 不同意领养列表
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div><!-- 左侧显示列表部分 end-->
-
-    </nav>
+    <jsp:include page="header.jsp"></jsp:include>
     <!-- 领养表列表查询部分  start-->
     <div id="page-wrapper">
         <div class="row">
@@ -203,13 +126,15 @@
                             申请人
                         </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="edit_name" placeholder="用户名称" value="${apply.name}" name="name">
+                            <input type="text" class="form-control" id="edit_name" placeholder="用户名称"
+                                   value="${apply.name}" name="name">
                         </div>
                         <label for="edit_email" class="col-sm-2 control-label">
                             邮件
                         </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="edit_email" placeholder="邮件" value="${apply.email}" name="email">
+                            <input type="text" class="form-control" id="edit_email" placeholder="邮件"
+                                   value="${apply.email}" name="email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -217,13 +142,15 @@
                             申请时间
                         </label>
                         <div class="col-sm-4">
-                            <input type="date" class="form-control" id="edit_time" placeholder="时间" value="${apply.applyTime}"  name="applyTime">
+                            <input type="date" class="form-control" id="edit_time" placeholder="时间"
+                                   value="${apply.applyTime}" name="applyTime">
                         </div>
                         <label for="edit_telephone" class="col-sm-2 control-label">
                             电话号码
                         </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="edit_telephone" placeholder="电话" value="${apply.telephone}" name="telephone">
+                            <input type="text" class="form-control" id="edit_telephone" placeholder="电话"
+                                   value="${apply.telephone}" name="telephone">
                         </div>
                     </div>
                     <div class="form-group">
@@ -231,13 +158,15 @@
                             年龄
                         </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="edit_age" placeholder="年龄" value="${apply.age}"  name="age">
+                            <input type="text" class="form-control" id="edit_age" placeholder="年龄" value="${apply.age}"
+                                   name="age">
                         </div>
                         <label for="edit_message" class="col-sm-2 control-label">
                             申请理由
                         </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="edit_message" placeholder="申请理由" value="${apply.message}" name="message">
+                            <input type="text" class="form-control" id="edit_message" placeholder="申请理由"
+                                   value="${apply.message}" name="message">
                         </div>
                     </div>
                     <div class="form-group">
@@ -272,23 +201,24 @@
 
     //总的数据 当前的页面
 
-    var totalRecord,currentPage,currentSize,currentPageSize;
+    var totalRecord, currentPage, currentSize, currentPageSize;
 
-    $(function(){
+    $(function () {
         to_page(1);
     });
-    function to_page(pn){
+
+    function to_page(pn) {
         $.ajax({
-            url:"${pageContext.request.contextPath}/apply/applys.action",
-            data:"pn="+pn,
-            type:"GET",
-            success:function(result){
+            url: "${pageContext.request.contextPath}/apply/applys.action",
+            data: "pn=" + pn,
+            type: "GET",
+            success: function (result) {
                 resolving(result);
             }
         });
     }
 
-    function resolving(result){
+    function resolving(result) {
         //1、解析并显示员工数据
         build_adopts_table(result);
         //2、解析并显示分页信息
@@ -296,34 +226,35 @@
         //3、解析显示分页条数据
         build_page_nav(result);
     }
-    function build_adopts_table(result){
+
+    function build_adopts_table(result) {
         //清空table表格
         $("#apply_table tbody").empty();
         //index：下标 user：单个对象
-        var applys=result.extend.pageInfo.list;
-        $.each(applys,function(index,apply){
+        var applys = result.extend.pageInfo.list;
+        $.each(applys, function (index, apply) {
             var checkBoxTd = $("<td><input type='checkbox' class='check_item'/></td>");
             var applyIdTd = $("<td></td>").append(apply.id);
             var nameTd = $("<td></td>").append(apply.name);
             var emailTd = $("<td></td>").append(apply.email);
-            var ageTd=$("<td></td>").append(apply.age);
-            var telephoneTd=$("<td></td>").append(apply.telephone);
-            var messageTd=$("<td></td>").append(apply.message);
-            var applyTimeTd=$("<td></td>").append(apply.applyTime);
-            var stateTd=null;
-            if(apply.state==2){
-                stateTd=$("<td></td>").append("没有被处理");
-            }else{
-                stateTd=$("<td></td>").append("已经被处理");
+            var ageTd = $("<td></td>").append(apply.age);
+            var telephoneTd = $("<td></td>").append(apply.telephone);
+            var messageTd = $("<td></td>").append(apply.message);
+            var applyTimeTd = $("<td></td>").append(apply.applyTime);
+            var stateTd = null;
+            if (apply.state == 2) {
+                stateTd = $("<td></td>").append("没有被处理");
+            } else {
+                stateTd = $("<td></td>").append("已经被处理");
             }
             var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm edit_btn")
                 .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("修改");
             //为编辑按钮添加一个自定义的属性，来表示当前员工id
-            editBtn.attr("edit-id",apply.id);
-            var delBtn =  $("<button></button>").addClass("btn btn-danger btn-sm delete_btn")
+            editBtn.attr("edit-id", apply.id);
+            var delBtn = $("<button></button>").addClass("btn btn-danger btn-sm delete_btn")
                 .append($("<span></span>").addClass("glyphicon glyphicon-trash")).append("删除");
             //为删除按钮添加一个自定义的属性来表示当前删除的员工id
-            delBtn.attr("del-id",apply.id);
+            delBtn.attr("del-id", apply.id);
             var btnTd = $("<td></td>").append(editBtn).append(" ").append(delBtn);
             //var delBtn =
             //append方法执行完成以后还是返回原来的元素
@@ -342,48 +273,49 @@
     }
 
     //解析显示分页信息
-    function build_page_info(result){
+    function build_page_info(result) {
         $("#page_info_area").empty();
-        $("#page_info_area").append("当前"+result.extend.pageInfo.pageNum+"页,总"+
-            result.extend.pageInfo.pages+"页,总"+
-            result.extend.pageInfo.total+"条记录");
+        $("#page_info_area").append("当前" + result.extend.pageInfo.pageNum + "页,总" +
+            result.extend.pageInfo.pages + "页,总" +
+            result.extend.pageInfo.total + "条记录");
         totalRecord = result.extend.pageInfo.total;//最后的数据
         currentPage = result.extend.pageInfo.pageNum;//当前页
-        currentSize=result.extend.pageInfo.size;//当前页面的尺寸
-        currentPageSize=result.extend.pageInfo.pageSize;//每页的尺寸
+        currentSize = result.extend.pageInfo.size;//当前页面的尺寸
+        currentPageSize = result.extend.pageInfo.pageSize;//每页的尺寸
     }
+
     //解析显示分页条，点击分页要能去下一页....
-    function build_page_nav(result){
+    function build_page_nav(result) {
         //page_nav_area
         $("#page_nav_area").empty();
         var ul = $("<ul></ul>").addClass("pagination");
 
         //构建元素
-        var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+        var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href", "#"));
         var prePageLi = $("<li></li>").append($("<a></a>").append("&laquo;"));
-        if(result.extend.pageInfo.hasPreviousPage == false){
+        if (result.extend.pageInfo.hasPreviousPage == false) {
             firstPageLi.addClass("disabled");
             prePageLi.addClass("disabled");
-        }else{
+        } else {
             //为元素添加点击翻页的事件
-            firstPageLi.click(function(){
+            firstPageLi.click(function () {
                 to_page(1);
             });
-            prePageLi.click(function(){
-                to_page(result.extend.pageInfo.pageNum -1);
+            prePageLi.click(function () {
+                to_page(result.extend.pageInfo.pageNum - 1);
             });
         }
 
         var nextPageLi = $("<li></li>").append($("<a></a>").append("&raquo;"));
-        var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
-        if(result.extend.pageInfo.hasNextPage == false){
+        var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href", "#"));
+        if (result.extend.pageInfo.hasNextPage == false) {
             nextPageLi.addClass("disabled");
             lastPageLi.addClass("disabled");
-        }else{
-            nextPageLi.click(function(){
-                to_page(result.extend.pageInfo.pageNum +1);
+        } else {
+            nextPageLi.click(function () {
+                to_page(result.extend.pageInfo.pageNum + 1);
             });
-            lastPageLi.click(function(){
+            lastPageLi.click(function () {
                 to_page(result.extend.pageInfo.pages);
             });
         }
@@ -391,13 +323,13 @@
         //添加首页和前一页 的提示
         ul.append(firstPageLi).append(prePageLi);
         //1,2，3遍历给ul中添加页码提示
-        $.each(result.extend.pageInfo.navigatepageNums,function(index,item){
+        $.each(result.extend.pageInfo.navigatepageNums, function (index, item) {
 
             var numLi = $("<li></li>").append($("<a></a>").append(item));
-            if(result.extend.pageInfo.pageNum == item){
+            if (result.extend.pageInfo.pageNum == item) {
                 numLi.addClass("active");
             }
-            numLi.click(function(){
+            numLi.click(function () {
                 to_page(item);
             });
             ul.append(numLi);
@@ -411,32 +343,33 @@
     }
 
     //清空表单样式及内容
-    function reset_form(ele){
+    function reset_form(ele) {
         $(ele)[0].reset();
         //清空表单样式
         $(ele).find("*").removeClass("has-error has-success");
         $(ele).find(".help-block").text("");
     }
+
     //点击新增按钮弹出模态框。
-    $("#admin_add_modal_btn").click(function(){
+    $("#admin_add_modal_btn").click(function () {
         //清除表单数据（表单完整重置（表单的数据，表单的样式））
         reset_form("#newAdmin form");
         //弹出模态框
         $("#newAdmin").modal({
-            backdrop:"static"
+            backdrop: "static"
         });
     });
 
     //点击编辑按钮弹出模态框。
-    $(document).on("click",".edit_btn",function(){
+    $(document).on("click", ".edit_btn", function () {
         //1、发送ajax,根据id获取用户信息
         //清除表单数据（表单完整重置（表单的数据，表单的样式））
         reset_form("#editApply form");
         var id = $(this).attr("edit-id");
         $.ajax({
-            url:"${pageContext.request.contextPath}/apply/findById.action?id="+id,
-            type:"GET",
-            success:function(result){
+            url: "${pageContext.request.contextPath}/apply/findById.action?id=" + id,
+            type: "GET",
+            success: function (result) {
                 //填充用户信息
                 console.log(result);
                 $("#edit_id").val(result.extend.apply.id);
@@ -448,26 +381,27 @@
                 $("#edit_time").val(result.extend.apply.applyTime);
                 $("#edit_state").val(result.extend.apply.state);
 
-            }});
+            }
+        });
         //2、弹出模态框
         $("#editApply").modal({
-            backdrop:"static"
+            backdrop: "static"
         });
 
     });
 
     //点击更新按钮弹出模态框。
-    $("#apply_update_btn").click(function(){
+    $("#apply_update_btn").click(function () {
         $.ajax({
-            url:"${pageContext.request.contextPath}/apply/update.action",
-            type:"POST",
-            data:$("#edit_apply_form").serialize(),
-            success:function (result) {
+            url: "${pageContext.request.contextPath}/apply/update.action",
+            type: "POST",
+            data: $("#edit_apply_form").serialize(),
+            success: function (result) {
                 alert("申请信息更新成功！");
                 $("#apply_updateDown_btn").click();
                 to_page(currentPage);
             },
-            error:function(result){
+            error: function (result) {
                 alert("管理员信息更新失败！");
                 to_page(currentPage);
             }
@@ -476,24 +410,24 @@
     });
 
     //单个删除
-    $(document).on("click",".delete_btn",function(){
+    $(document).on("click", ".delete_btn", function () {
         //1、弹出是否确认删除对话框
         var name = $(this).parents("tr").find("td:eq(2)").text();
         var id = $(this).attr("del-id");
-        if(confirm("确认删除【"+name+"】吗？")){
+        if (confirm("确认删除【" + name + "】吗？")) {
             //确认，发送ajax请求删除即可
             $.ajax({
-                url:"${pageContext.request.contextPath}/apply/delete.action?id="+id,
-                type:"GET",
-                success:function (result) {
-                    if(result.code==100){
+                url: "${pageContext.request.contextPath}/apply/delete.action?id=" + id,
+                type: "GET",
+                success: function (result) {
+                    if (result.code == 100) {
                         alert("申请删除成功！");
-                        if(currentSize==1){
-                            to_page(currentPage-1);
+                        if (currentSize == 1) {
+                            to_page(currentPage - 1);
                         } else {
                             to_page(currentPage);
                         }
-                    }else{
+                    } else {
                         alert("管理员删除失败！");
                         to_page(currentPage);
                     }
@@ -503,76 +437,76 @@
     });
     $("#find_modal_btn").click(function () {
         $("#apply_table tbody").empty();
-        var state=$("#findByState").val();
-        to_findByState(1,state);
+        var state = $("#findByState").val();
+        to_findByState(1, state);
     });
 
 
-    function to_findByState(pn,state) {
+    function to_findByState(pn, state) {
         $.ajax({
-            url:"${pageContext.request.contextPath}/apply/findByState.action",
-            type:"POST",
-            dataType:"json",
-            data:{"pn":pn,"state":state},
-            async:"true",
-            success:function (result) {
+            url: "${pageContext.request.contextPath}/apply/findByState.action",
+            type: "POST",
+            dataType: "json",
+            data: {"pn": pn, "state": state},
+            async: "true",
+            success: function (result) {
                 build_adopts_table(result);
                 build_page_info(result);
-                build_page_findByState(result,state);
+                build_page_findByState(result, state);
             },
-            error:function (result) {
+            error: function (result) {
                 alert("查询失败")
             }
         });
     }
 
     //解析显示分页条，点击分页要能去下一页....
-    function build_page_findByState(result,state){
+    function build_page_findByState(result, state) {
         //page_nav_area
         $("#page_nav_area").empty();
         var ul = $("<ul></ul>").addClass("pagination");
 
         //构建元素
-        var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+        var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href", "#"));
         var prePageLi = $("<li></li>").append($("<a></a>").append("&laquo;"));
-        if(result.extend.pageInfo.hasPreviousPage == false){
+        if (result.extend.pageInfo.hasPreviousPage == false) {
             firstPageLi.addClass("disabled");
             prePageLi.addClass("disabled");
-        }else{
+        } else {
             //为元素添加点击翻页的事件
-            firstPageLi.click(function(){
-                to_findByState(1,state);
+            firstPageLi.click(function () {
+                to_findByState(1, state);
             });
-            prePageLi.click(function(){
-                to_findByState(result.extend.pageInfo.pageNum -1,state);
+            prePageLi.click(function () {
+                to_findByState(result.extend.pageInfo.pageNum - 1, state);
             });
         }
 
         var nextPageLi = $("<li></li>").append($("<a></a>").append("&raquo;"));
-        var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
-        if(result.extend.pageInfo.hasNextPage == false){
+        var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href", "#"));
+        if (result.extend.pageInfo.hasNextPage == false) {
             nextPageLi.addClass("disabled");
             lastPageLi.addClass("disabled");
-        }else{
-            nextPageLi.click(function(){
-                to_findByState(result.extend.pageInfo.pageNum +1,state);
+        } else {
+            nextPageLi.click(function () {
+                to_findByState(result.extend.pageInfo.pageNum + 1, state);
             });
-            lastPageLi.click(function(){
-                to_findByState(result.extend.pageInfo.pages,state);
+            lastPageLi.click(function () {
+                to_findByState(result.extend.pageInfo.pages, state);
             });
         }
 
         //添加首页和前一页 的提示
         ul.append(firstPageLi).append(prePageLi);
         //1,2，3遍历给ul中添加页码提示
-        $.each(result.extend.pageInfo.navigatepageNums,function(index,item){
+        $.each(result.extend.pageInfo.navigatepageNums, function (index, item) {
 
             var numLi = $("<li></li>").append($("<a></a>").append(item));
-            if(result.extend.pageInfo.pageNum == item){
+            if (result.extend.pageInfo.pageNum == item) {
                 numLi.addClass("active");
             }
-            numLi.click(function(){
-                to_findByState(item,state);
+            numLi.click(function () {
+                to_findByState(item, state);
             });
             ul.append(numLi);
         });
@@ -585,4 +519,5 @@
     }
 </script>
 
-</body></html>
+</body>
+</html>
