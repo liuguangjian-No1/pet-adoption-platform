@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class MyInterceptor implements HandlerInterceptor {
 
@@ -18,15 +19,18 @@ public class MyInterceptor implements HandlerInterceptor {
 
         String requestUri = request.getRequestURI();
 
-        System.out.println("111111111111111111111111");
-        if (requestUri.indexOf("/login") >= 0 || requestUri.indexOf("/animal/user/*.jsp") > 0 || requestUri.indexOf("/.action") > 0 ||requestUri.indexOf("/user/index") > 0) {
+        if (requestUri.contains("/*.action")) {
             System.out.println("22222222222222222222222222");
-            System.out.println("requestUri=      "+requestUri);
+            System.out.println("requestUri=    "+requestUri);
+
             return true;
         }
-
-        Admin admin = (Admin) request.getSession().getAttribute("admin");
-        if(requestUri.indexOf("/animal/admin/*.jsp") >= 0){
+        HttpSession session = request.getSession();
+        Admin admin = (Admin) session.getAttribute("admin");
+        //Admin admin = (Admin) request.getSession().getAttribute("admin");
+        System.out.println("admin-------------"+admin);
+        if(requestUri.contains("/animal/admin/*.jsp")){
+            System.out.println("2222222 requestUri---------"+requestUri);
             if (admin != null) {
                 return true;
             }else{

@@ -30,7 +30,6 @@
         <!--导入mapper文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
-
     <!--扫描mapper包-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--mapper对象的注册-->

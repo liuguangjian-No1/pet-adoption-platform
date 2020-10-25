@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="renderer" content="webkit">
     <title>登录页面</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/base.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login.css">
 </head>
 <body>
 <div class="bg"></div>
@@ -54,8 +54,8 @@
     </div>
 </div>
 </body>
-<script src="${pageContext.request.contextPath}/js/gVerify.js"></script>
-<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.js "></script>
+<script src="${pageContext.request.contextPath}/static/js/gVerify.js"></script>
+<script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.js "></script>
 <script>
 
     var verifyCode = new GVerify("v_container");

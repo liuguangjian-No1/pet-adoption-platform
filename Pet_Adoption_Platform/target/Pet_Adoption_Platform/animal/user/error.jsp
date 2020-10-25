@@ -11,7 +11,7 @@
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); }
     </script>
-    <link href="${pageContext.request.contextPath}/css/error.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/static/css/error.css" rel="stylesheet" type="text/css" media="all" />
 
 <body>
 

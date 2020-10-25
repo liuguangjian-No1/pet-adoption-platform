@@ -20,10 +20,10 @@
     </script>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.css" type="text/css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css" type="text/css"
           media="all">
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all"/>
 
 </head>
 <body>
@@ -54,14 +54,14 @@
 
 <!-- //services -->
 <!-- js -->
-<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
 <!-- Necessary-JavaScript-File-For-Bootstrap -->
 <!-- //js -->
 
 <!-- start-smooth-scrolling 上去-->
-<script src="${pageContext.request.contextPath}/js/move-top.js"></script>
-<script src="${pageContext.request.contextPath}/js/easing.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/move-top.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/easing.js"></script>
 <script>
     jQuery(document).ready(function ($) {
         $(".scroll").click(function (event) {
@@ -76,14 +76,14 @@
 <!-- //end-smooth-scrolling -->
 
 <!-- smooth-scrolling-of-move-up 这是service.html页面反到底层上去的功能 -->
-<script>
+<%--<script>
     $(document).ready(function () {
         $().UItoTop({
             easingType: 'easeOutQuart'
         });
 
     });
-</script>
+</script>--%>
 <!-- //smooth-scrolling-of-move-up -->
 <script type="text/javascript">
     //总的数据 当前的页面
@@ -100,7 +100,6 @@
             data: "pn=" + pn,
             type: "GET",
             success: function (result) {
-                console.log(result);
                 //1、解析并显示员工数据
                 build_pets_table(result);
                 //3、解析显示分页条数据

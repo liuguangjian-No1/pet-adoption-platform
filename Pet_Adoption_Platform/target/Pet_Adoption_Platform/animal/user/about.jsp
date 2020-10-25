@@ -11,10 +11,10 @@
 
 
     <!-- css files -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css" type="text/css" media="all">
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all"/>
-    <link href='${pageContext.request.contextPath}/css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all"/>
+    <link href='${pageContext.request.contextPath}/static/css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <jsp:include page="navigation.jsp"></jsp:include>
@@ -24,7 +24,7 @@
         <h3 class="agile-title">欢迎</h3>
         <div class="about-top w3ls-agile">
             <div class="col-md-6 red">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/images/ab.jpg" alt=""
+                <img class="img-responsive" src="${pageContext.request.contextPath}/static/images/ab.jpg" alt=""
                      style="border-radius: 25%;width: 400px;height: 400px">
             </div>
             <div class="col-md-6 come">
@@ -110,46 +110,46 @@
     </div>--%>
     <div class="container">
         <div class="col-lg-3 divImg" >
-            <a href="../../images/cat1_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/cat1_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/cat1_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/cat1_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/cat2_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/cat2_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/cat2_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/cat2_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/cat3_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/cat3_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/cat3_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/cat3_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/dog1_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/dog1_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/dog1_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/dog1_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
     </div>
 
     <div class="container">
         <div class="col-lg-3 divImg">
-            <a href="../../images/dog2_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/dog2_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/dog2_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/dog2_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/dog3_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/dog3_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/dog3_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/dog3_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/cat5_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/cat5_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/cat5_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/cat5_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
         <div class="col-lg-3 divImg">
-            <a href="../../images/dog4_1.jpg" class="imghvr-hinge-right figure">
-                <img src="../../images/dog4_1.jpg" alt="" title="Cat Life Image" />
+            <a href="../../static/images/dog4_1.jpg" class="imghvr-hinge-right figure">
+                <img src="../../static/images/dog4_1.jpg" alt="" title="Cat Life Image" />
             </a>
         </div>
     </div>
@@ -164,7 +164,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="modal-info">
                         <h4>Dog Life</h4>
-                        <img src="${pageContext.request.contextPath}/images/2.jpg" alt=" " class="img-responsive"/>
+                        <img src="${pageContext.request.contextPath}/static/images/2.jpg" alt=" " class="img-responsive"/>
                         <p class="para-agileits-w3layouts">
                             喂食的时间要准，尽量按照在原主人家的习惯喂养，不要喂它们过多的甜食、咸食和刺激性强的食品。
                             刚来的宝宝，主人要亲自喂食，时日积久，便能和爱犬建立起深厚的感情，加深相互信任的程度，
@@ -184,7 +184,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="modal-info">
                         <h4>Cat Life</h4>
-                        <img src="${pageContext.request.contextPath}/images/1.jpg" alt=" " class="img-responsive"/>
+                        <img src="${pageContext.request.contextPath}/static/images/1.jpg" alt=" " class="img-responsive"/>
                         <p class="para-agileits-w3layouts">
                             我们不能一直将小猫放在家里面养，我们需要时不时的将小猫带出去溜溜,然后，我们在养小猫的时候，还需要多陪小猫玩耍。
                             我们在养小猫的时候，还需要多打理打理它的毛发。
@@ -197,13 +197,13 @@
 
     <!-- //Gallery -->
     <!-- js -->
-    <script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
     <!-- //js -->
 
     <!-- simple-lightbox -->
-    <script src="${pageContext.request.contextPath}/js/simple-lightbox.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/simple-lightbox.min.js"></script>
     <script>
         $(function () {
             var gallery = $('.agileinfo-gallery-row a').simpleLightbox({

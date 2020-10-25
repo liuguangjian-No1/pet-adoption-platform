@@ -13,9 +13,9 @@ public class Admin {
     private String realName;
     private String telephone;
     private String Email;
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date birthday;
+    /*@JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")*/
+    private String birthday;
     private String sex;
     private String pic;
     private String remark;
@@ -26,7 +26,7 @@ public class Admin {
     }
 
 
-    public Admin(Integer id, String adminName, String adminPwd, String realName, String telephone, String email, Date birthday, String sex, String pic, String remark, List<Comment> commentList) {
+    public Admin(Integer id, String adminName, String adminPwd, String realName, String telephone, String email, String birthday, String sex, String pic, String remark, List<Comment> commentList) {
         this.id = id;
         this.adminName = adminName;
         this.adminPwd = adminPwd;
@@ -88,11 +88,11 @@ public class Admin {
         Email = email;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

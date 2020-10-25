@@ -29,7 +29,6 @@ public class PetController {
     public Message getPets(@RequestParam(value = "pn",defaultValue = "1")Integer pn){
         PageHelper.startPage(pn,4);
         List<Pet> pets = petService.getPets();
-        System.out.println(pets);
         PageInfo page=new PageInfo(pets,4);
         return Message.success().add("pageInfo",page);
     }
@@ -40,8 +39,7 @@ public class PetController {
         PageHelper.startPage(pn,3);
         int state=0;
         List<Pet> pets = petService.findByState(0);
-        System.out.println(pets);
-        PageInfo page=new PageInfo(pets,2);
+        PageInfo page=new PageInfo(pets,4);
         return Message.success().add("pageInfo",page);
     }
 
@@ -69,8 +67,14 @@ public class PetController {
 
     @RequestMapping("update.action")
     @ResponseBody
-    public Message updatePet(Pet pet){
-        if(petService.updatePet(pet)>0){
+    public Message updatePet(Pet pet,MultipartFile file){
+        if(file!=null &&file.getSize()>0) {
+            String pic = FileLoad.load(file);
+            pet.setPic(pic);
+        }
+        int i = petService.updatePet(pet);
+        System.out.println("================="+i);
+        if( i > 0){
             return Message.success();
         }else{
             return Message.fail();
@@ -91,7 +95,6 @@ public class PetController {
     @ResponseBody
     public Message findByPet(Integer id, HttpServletRequest request){
         Pet pet = petService.findById(id);
-        System.out.println(pet);
         String pic = pet.getPic();
         String[] split = pic.split(",");
         List<String> pics=new ArrayList<>();
@@ -106,8 +109,8 @@ public class PetController {
         } else{
             return Message.fail();
         }
-
     }
+
     @RequestMapping("findByPetType.action")
     @ResponseBody
     public Message findByName(@RequestParam(value = "pn",defaultValue = "1")Integer pn, String petType){

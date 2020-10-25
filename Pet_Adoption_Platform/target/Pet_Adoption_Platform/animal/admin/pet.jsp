@@ -7,16 +7,16 @@
     <title>宠物领养管理后台</title>
     <!-- 引入css样式文件 -->
     <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/metisMenu.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
     <style>
         .panel-heading {
             background-color: #337ab7;
@@ -93,17 +93,18 @@
 
                         </tbody>
                     </table>
-                    <div class="row">
-                        <!--分页文字信息  -->
-                        <div class="col-md-8" id="page_info_area"></div>
-                        <!-- 分页条信息 -->
-                        <div class="col-md-4" id="page_nav_area"></div>
-                    </div>
+
                     <!-- /.panel-body -->
                 </div>
                 <!-- /.panel -->
             </div>
             <!-- /.col-lg-12 -->
+            <div class="row">
+                <!--分页文字信息  -->
+                <div class="col-md-8" id="page_info_area"></div>
+                <!-- 分页条信息 -->
+                <div class="col-md-4" id="page_nav_area"></div>
+            </div>
         </div>
     </div>
     <!-- 班级列表查询部分  end-->
@@ -278,16 +279,16 @@
 </div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/metisMenu.min.js"></script>
 <!-- DataTables JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/houtai/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/dataTables.bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/sb-admin-2.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
 
@@ -502,7 +503,7 @@
                 $("#edit_remark").val(result.extend.pet.remark);
             },
             error: function (result) {
-                alert("通过id查询用户失败")
+                alert("通过id查询宠物失败")
             }
         });
         //2、弹出模态框
@@ -520,17 +521,18 @@
             url: "${pageContext.request.contextPath}/pet/update.action",
             type: "POST",
             processData: false,  // 告诉jQuery不要去处理发送的数据
-            contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+            contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
             data: petTd,
             success: function (result) {
-                to_page(currentPage);
-                $("#pet_updateDown_btn").click();
-                alert("宠物信息更新成功！");
-            },
-            error: function (result) {
-                alert("宠物信息更新失败！");
-                $("#pet_saveDown_btn").click();
-                to_page(currentPage);
+                if(result.message=="处理成功！"){
+                    to_page(currentPage);
+                    $("#pet_updateDown_btn").click();
+                    alert("宠物信息更新成功！");
+                }else{
+                    alert("宠物信息更新失败！");
+                    $("#pet_saveDown_btn").click();
+                    to_page(currentPage);
+                }
             }
         });
 

@@ -17,7 +17,8 @@
     </delete>
 
     <update id="updateAdmin" parameterType="Admin">
-        UPDATE admin SET adminName=#{adminName},adminPwd=#{adminPwd},realName=#{realName},telephone=#{telephone},Email=#{Email},birthday=#{birthday},sex=#{sex},
+        UPDATE admin SET adminName=#{adminName},adminPwd=#{adminPwd},realName=#{realName},telephone=#{telephone},
+                Email=#{Email},birthday=#{birthday},sex=#{sex},
         <trim suffix=",">
             <if test="pic !=null and pic != ''">
                 pic=#{pic}

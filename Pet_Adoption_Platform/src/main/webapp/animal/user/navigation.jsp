@@ -9,11 +9,11 @@
     </title>
     <sitemesh:write property='head'/>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css">
+    <script src="${pageContext.request.contextPath}/static/js/jquery-2.2.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all"/>
 </head>
 <body>
 <!-- sticky navigation -->
@@ -84,67 +84,68 @@
 
 
 <div class="head">
+    <div style="width: 90%">
+        <div class="col-lg-2" style="text-align: left">
+            <a href="${pageContext.request.contextPath}/animal/user/index.jsp">
+                <img class="logo-img center-block" src="${pageContext.request.contextPath}/static/images/logo.jpg"
+                     style="border-radius: 80px;width: 70px;height: 50px"/>
+            </a>
+        </div>
+        <div class="col-lg-6" style=" padding: 10px;text-align: left ;font-size: 21px;">
+            <a href="${pageContext.request.contextPath}/animal/user/index.jsp">主页</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <div class="col-lg-2" style="text-align: left">
-        <a href="${pageContext.request.contextPath}/animal/user/index.jsp">
-            <img class="logo-img center-block" src="${pageContext.request.contextPath}/images/logo.jpg"
-                 style="border-radius: 80px;width: 70px;height: 50px"/>
-        </a>
-    </div>
-    <div class="col-lg-6" style=" padding: 10px;text-align: left ;font-size: 18px;">
-        <a href="${pageContext.request.contextPath}/animal/user/index.jsp">主页</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/animal/user/about.jsp">宠物知识</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <a href="${pageContext.request.contextPath}/animal/user/about.jsp">宠物知识</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/animal/user/service.jsp ">领养中心</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <a href="${pageContext.request.contextPath}/animal/user/service.jsp ">领养中心</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%--<a href="${pageContext.request.contextPath}/animal/shop.jsp">宠物商店</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <%--<a href="${pageContext.request.contextPath}/animal/shop.jsp">宠物商店</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/animal/hospital.jsp">宠物医院</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--%>
 
-        <a href="${pageContext.request.contextPath}/animal/hospital.jsp">宠物医院</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--%>
+            <a href="${pageContext.request.contextPath}/animal/user/teamBlog.jsp">团队博客</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <a href="${pageContext.request.contextPath}/animal/user/teamBlog.jsp">团队博客</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/animal/user/team.jsp">团队展示</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <a href="${pageContext.request.contextPath}/animal/user/team.jsp">团队展示</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <%--<select language=javascript onchange="location.href=this.value" class="select">
-            <option selected="selected" disabled="disabled " style="display: none">关于我们</option>
-            <option value="${pageContext.request.contextPath}/animal/user/teamBlog.jsp">团队博客</option>
-            <option value="${pageContext.request.contextPath}/animal/user/team.jsp">团队展示</option>
-        </select>--%>
-    </div>
-    <div class="col-lg-4" style="text-align: right">
-        <!-- 判断是否登录 显示哪个内容 -->
-        <%
-            boolean isLogin = false;
-            Object user = request.getSession().getAttribute("user");
-            if (user != null) {
-                isLogin = true;
-            }
-            request.getSession().setAttribute("isLogin", isLogin);
-        %>
-        <c:if test="${sessionScope.isLogin}" var="flage" scope="session">
-            <%--            <div class="img" id="edit_logout" >--%>
-            <img id="user_edit_modal_btn" src="/pic/${user.getPic()}" alt="头像"
-                 style="border-radius:50%;width: 55px;height: 45px;text-align: left " value="${user.getId()}">
-            <a href="${pageContext.request.contextPath}/user/logout.action" id="logout"
-               style="text-align: right">退出登录</a>
-        </c:if>
-        <%--    </div>
-            <div class="col-lg-2">--%>
-        <c:if test="${!flage}" var="flage" scope="session">
-            <button id="login_register" class="btn-primary btn-lg" data-toggle="modal" data-target="#login"
-                    style="text-align: right">登录
-            </button>
-        </c:if>
-        <a href="${pageContext.request.contextPath}/animal/admin/login.jsp"
-           style="color: #c2ab1c;text-align: right; font-size: 16px">管理员</a>
+            <%--<select language=javascript onchange="location.href=this.value" class="select">
+                <option selected="selected" disabled="disabled " style="display: none">关于我们</option>
+                <option value="${pageContext.request.contextPath}/animal/user/teamBlog.jsp">团队博客</option>
+                <option value="${pageContext.request.contextPath}/animal/user/team.jsp">团队展示</option>
+            </select>--%>
+        </div>
+        <div class="col-lg-4" style="text-align: right">
+            <!-- 判断是否登录 显示哪个内容 -->
+            <%
+                boolean isLogin = false;
+                Object user = request.getSession().getAttribute("user");
+                if (user != null) {
+                    isLogin = true;
+                }
+                request.getSession().setAttribute("isLogin", isLogin);
+            %>
+            <c:if test="${sessionScope.isLogin}" var="flage" scope="session">
+                <%--            <div class="img" id="edit_logout" >--%>
+                <img id="user_edit_modal_btn" src="/pic/${user.getPic()}" alt="头像"
+                     style="border-radius:50%;width: 55px;height: 45px;text-align: left " value="${user.getId()}">
+                <a href="${pageContext.request.contextPath}/user/logout.action" id="logout"
+                   style="text-align: right">退出登录</a>
+            </c:if>
+            <%--    </div>
+                <div class="col-lg-2">--%>
+            <c:if test="${!flage}" var="flage" scope="session">
+                <button id="login_register" class="btn-primary btn-lg" data-toggle="modal" data-target="#login"
+                        style="text-align: right">登录
+                </button>
+            </c:if>
+            <a href="${pageContext.request.contextPath}/animal/admin/login.jsp"
+               style="color: #c2ab1c;text-align: right; font-size: 16px">管理员</a>
+        </div>
     </div>
 </div>
 <!-- 注册登录模块框 -->

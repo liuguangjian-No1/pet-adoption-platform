@@ -9,13 +9,13 @@
     <meta name="keywords" content=""/>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css" type="text/css" media="all">
     <!-- Font-Awesome-Icons-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/owl.carousel.css" type="text/css" media="all" />
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all" />
 
     <!-- Style-CSS -->
     <!-- //css files -->

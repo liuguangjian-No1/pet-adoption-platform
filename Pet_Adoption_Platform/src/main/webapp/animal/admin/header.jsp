@@ -9,16 +9,16 @@
     <sitemesh:write property='head'/>
     <!-- 引入css样式文件 -->
     <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/metisMenu.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
     <style>
         .panel-heading {
             background-color: #337ab7;
@@ -43,10 +43,10 @@
 <body>
 <!-- 导航栏部分 -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="" style="font-size: 24px">流浪猫狗管理系统</a>
+    <div class="navbar-header" style="text-align: center">
+        <a class="navbar-brand" href="" style="font-size: 30px ">宠物管理系统</a>
     </div>
-    <!-- 导航栏右侧图标部分 -->
+
     <!-- 导航栏右侧图标部分 -->
     <ul class="nav navbar-top-links navbar-right">
         <!-- 消息通知 end -->
@@ -61,10 +61,15 @@
                 <li>
                     <input type="hidden" id="currentAdminId" value="${admin.id}">
                 </li>
-                <li><a href="${pageContext.request.contextPath}/admin/developing"><i class="fa fa-user fa-fw"></i>
-                    管理员：${admin.adminName}</a>
+                <li>
+                    <a href="${pageContext.request.contextPath}/admin/developing">
+                        <i class="fa fa-user fa-fw"></i>
+                        管理员：${admin.adminName}</a>
                 </li>
-                <li><a href="${pageContext.request.contextPath}/admin/developing"><i class="fa fa-gear fa-fw"></i> 系统设置</a>
+                <li>
+                    <a href="${pageContext.request.contextPath}/admin/developing">
+                    <i class="fa fa-gear fa-fw"></i>
+                        系统设置</a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -89,15 +94,15 @@
                  aria-labelledby="collapseListGroupHeading3">
                 <ul class="list-group">
                     <li class="list-group-item my_font">
-                        <a href="${pageContext.request.contextPath}/animal/admin/users.jsp">
-                            <i class="fa fa-flash fa-fw"></i> 用户信息
+                        <a href="${pageContext.request.contextPath}/animal/admin/admin.jsp">
+                            <i class="fa fa-flash fa-fw"></i> 管理员管理
                         </a>
                     </li>
                     <li class="list-group-item my_font">
-                        <a href="${pageContext.request.contextPath}/animal/admin/admin.jsp">
-                            <i class="fa fa-flash fa-fw"></i> 管理员信息
-                        </a>
-                    </li>
+                    <a href="${pageContext.request.contextPath}/animal/admin/users.jsp">
+                        <i class="fa fa-flash fa-fw"></i> 用户管理
+                    </a>
+                </li>
                     <li class="list-group-item my_font">
                         <a href="${pageContext.request.contextPath}/animal/admin/pet.jsp">
                             <i class="fa fa-sitemap fa-fw"></i> 宠物管理

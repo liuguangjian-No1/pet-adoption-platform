@@ -14,9 +14,9 @@
 
     <update id="updatePet" parameterType="pet">
         UPDATE pet SET petName=#{petName},petType=#{petType},sex=#{sex},birthday=#{birthday},
-        <trim suffixOverrides=",">
-            <if test="pic != null">
-                pic=#{pic},
+        <trim suffix=",">
+            <if test="pic != null and pic != ''">
+                pic=#{pic}
             </if>
         </trim>
         state=#{state},remark=#{remark} WHERE id=#{id}

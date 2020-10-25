@@ -26,8 +26,8 @@ public interface AdminMapper {
      * @param admin 更新的管理员信息
      * @return int
      * */
-    int updateAdmin(Admin admin);
 
+    int updateAdmin(Admin admin);
     /**
      * 查询所有的管理员
      * @return list

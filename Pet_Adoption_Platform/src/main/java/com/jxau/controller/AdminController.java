@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.jxau.entity.Admin;
 import com.jxau.service.AdminService;
+import com.jxau.service.impl.AdminServiceImpl;
 import com.jxau.util.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,7 @@ import java.util.List;
 public class AdminController {
 
     @Autowired
-    private AdminService adminService;
+    private AdminServiceImpl adminService;
 
 
     @RequestMapping("admins.action")
@@ -44,7 +45,6 @@ public class AdminController {
     @ResponseBody
     public Message addAdmin(Admin admin){
         int i = adminService.addAdmin(admin);
-        System.out.println(i);
         if(i>0){
             return Message.success();
         }else{
@@ -67,13 +67,11 @@ public class AdminController {
     @RequestMapping("update.action")
     @ResponseBody
     public Message updateAdmin(Admin admin, MultipartFile file){
-        System.out.println(111);
-        if(file!=null && !file.equals("")) {
+        if(file!=null &&file.getSize()>0) {
             String load = FileLoad.load(file);
             admin.setPic(load);
         }
         int i = adminService.updateAdmin(admin);
-        System.out.println(i);
         if(i>0){
             return Message.success();
         }else{

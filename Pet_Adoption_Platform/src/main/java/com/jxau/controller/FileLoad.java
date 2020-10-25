@@ -22,6 +22,9 @@ public class FileLoad {
             e.printStackTrace();
         }
         String name = picName + substring;
+        System.out.println("===========================");
+        System.out.println("===========================");
+        System.out.println("name------"+name);
         return name;
     }
 }

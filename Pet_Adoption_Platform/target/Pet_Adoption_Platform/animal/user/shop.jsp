@@ -9,14 +9,14 @@
     <meta name="keywords" content=""/>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" type="text/css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" type="text/css"
           media="all">
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css" type="text/css" media="all">
     <!-- Font-Awesome-Icons-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/owl.carousel.css" type="text/css" media="all"/>
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all"/>
 
     <!-- Style-CSS -->
     <!-- //css files -->
@@ -64,14 +64,14 @@
 
 <!-- //services -->
 <!-- js -->
-<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
 <!-- Necessary-JavaScript-File-For-Bootstrap -->
 <!-- //js -->
 
 <!-- start-smooth-scrolling 上去-->
-<script src="${pageContext.request.contextPath}/js/move-top.js"></script>
-<script src="${pageContext.request.contextPath}/js/easing.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/move-top.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/easing.js"></script>
 
 </body>
 </html>

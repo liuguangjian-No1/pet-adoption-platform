@@ -67,9 +67,6 @@ public class CommentController {
         Comment comment=new Comment();
         Users user = (Users)request.getSession().getAttribute("user");
         if(user==null){
-
-            System.out.println(Message.fail());
-
             return Message.fail();
         }
         Pet pet =(Pet) request.getSession().getAttribute("pet");

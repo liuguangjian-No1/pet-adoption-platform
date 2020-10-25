@@ -8,11 +8,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author 那年
+ */
 @Service
 public class PetServiceImpl implements PetService {
 
     @Autowired
     private PetMapper petMapper;
+
     @Override
     public int addPet(Pet pet) {
         int i = petMapper.addPet(pet);
@@ -27,7 +31,9 @@ public class PetServiceImpl implements PetService {
 
     @Override
     public int updatePet(Pet pet) {
+        System.out.println("=====================pet"+pet);
         int i = petMapper.updatePet(pet);
+        System.out.println("实打实看见爱上看来大家---------========================================"+i);
         return i;
     }
 

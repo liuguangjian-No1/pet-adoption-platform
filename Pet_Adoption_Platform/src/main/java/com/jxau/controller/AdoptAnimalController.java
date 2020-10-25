@@ -73,6 +73,9 @@ public class AdoptAnimalController {
     public Message createAdopt(HttpServletRequest request) {
         Pet pet = (Pet) request.getSession().getAttribute("pet");
         Users user = (Users) request.getSession().getAttribute("user");
+        if(user==null){
+            return Message.fail();
+        }
         pet.setState(1);
         AdoptAnimal animal = new AdoptAnimal();
         animal.setUser(user);

@@ -14,6 +14,7 @@ D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\entity\Admin.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\AdoptAnimalService.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\impl\PetServiceImpl.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\controller\AnswerController.java
+D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\entity\Pro_order.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\util\UUIDUtil.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\controller\PetController.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\mapper\AdoptAnimalMapper.java
@@ -39,6 +40,7 @@ D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\mapper\CommentMapper.j
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\mapper\UsersMapper.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\impl\BlogServiceImpl.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\impl\CommentServiceImpl.java
+D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\entity\Product.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\mapper\PetMapper.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\AdminService.java
 D:\Code\IDEA\Pet_Adoption_Platform\src\main\java\com\jxau\service\impl\ApplyServiceImpl.java

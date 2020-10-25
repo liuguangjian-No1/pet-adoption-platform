@@ -8,20 +8,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link href="${pageContext.request.contextPath}/bootstrap/bootstrap/bootstrap.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/bootstrap/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/bootstrap/bootstrap/bootstrap-overrides.css" type="text/css"
+    <link href="${pageContext.request.contextPath}/static/bootstrap/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/static/bootstrap/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/static/bootstrap/bootstrap/bootstrap-overrides.css" type="text/css"
           rel="stylesheet"/>
 
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/layout.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/elements.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/icons.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/elements.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/icons.css"/>
 
 
     <!-- this page specific styles 游泳-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/personal-info.css" type="text/css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/personal-info.css" type="text/css"
           media="screen"/>
 
     <!-- open sans font -->
@@ -107,15 +107,15 @@
                     </div>
                     <div class="span6 field-box actions">
                         <input type="button" class="btn-glow primary" value="提交修改" id="user_update_btn"/>
-                        <%--<input type="button" class="btn-glow primary" value="返回主页" id="return_btn" />--%>
+                        <input type="button" class="btn-glow primary" value="取消" id="return_btn" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 

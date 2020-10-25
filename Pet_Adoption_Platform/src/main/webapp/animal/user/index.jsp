@@ -9,13 +9,13 @@
     <meta name="keywords" content=""/>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css" type="text/css" media="all">
     <!-- Font-Awesome-Icons-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/owl.carousel.css" type="text/css" media="all" />
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css" type="text/css" media="all" />
 
     <!-- Style-CSS -->
     <!-- //css files -->
@@ -129,32 +129,32 @@
             <h3>宠物展示</h3>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f1.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f1.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f2.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f2.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f3.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f3.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f4.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f4.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f5.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f5.jpg" alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="agileinfo_footer_grid1">
                 <a href="#">
-                    <img src="${pageContext.request.contextPath}/images/f6.jpg " alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
+                    <img src="${pageContext.request.contextPath}/static/images/f6.jpg " alt=" " class="img-responsive index_img" style="height: 100px;width: 175px">
                 </a>
             </div>
             <div class="clearfix"> </div>
@@ -174,14 +174,14 @@
 
 
 <!-- js 非得用2.0版本得jQuery-->
-<script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.3.min.js"></script>
 
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 <!-- Necessary-JavaScript-File-For-Bootstrap -->
 <!-- //js -->
 
 <!-- Banner Slider -->
-<script src="${pageContext.request.contextPath}/js/responsiveslides.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/responsiveslides.min.js"></script>
 <script>
     $(function () {
         $("#slider").responsiveSlides({

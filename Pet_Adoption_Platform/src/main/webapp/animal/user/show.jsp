@@ -12,13 +12,14 @@
             margin-top: 40px;
         }
     </style>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <link href="${pageContext.request.contextPath}/css/jquery.slideBox.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/show.css">
-    <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery.slideBox.min.js" type="text/javascript"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery.comment.js"></script>
+    <link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/css/jquery.slideBox.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/show.css"rel="stylesheet" >
+
+    <script src="${pageContext.request.contextPath}/static/js/jquery-2.2.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/jquery.slideBox.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/js/jquery.comment.js"></script>
 </head>
 <body>
 
@@ -36,18 +37,18 @@
                 </ul>
             </div>
             <div class="name">
-                <img src="../../images/p9.jpg">
+                <img src="../../static/images/p9.jpg">
                 <span>${pet.petName}</span>
             </div>
         </center>
         <div class="animal">
             <div class="group">
                 <div class="animalX1">
-                    <img src="../../images/p2.jpg"><span>编号</span><br>
+                    <img src="../../static/images/p2.jpg"><span>编号</span><br>
                     <p>${pet.id}</p>
                 </div>
                 <div class="animalX2">
-                    <img src="../../images/p3.jpg"><span>生日</span><br>
+                    <img src="../../static/images/p3.jpg"><span>生日</span><br>
                     <p>
                         <fmt:formatDate pattern="yyyy-MM-dd" value="${pet.birthday}"/>
                     </p>
@@ -55,11 +56,11 @@
             </div>
             <div class="group">
                 <div class="animalX3">
-                    <img src="../../images/p4.jpg"><span>品种</span><br>
+                    <img src="../../static/images/p4.jpg"><span>品种</span><br>
                     <p>${pet.petType}</p>
                 </div>
                 <div class="animalX4">
-                    <img src="../../images/p5.jpg"><span>性别</span><br>
+                    <img src="../../static/images/p5.jpg"><span>性别</span><br>
                     <p>${pet.sex}</p>
                 </div>
             </div>
@@ -98,12 +99,12 @@
                                 姓名： </label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="new_Name"
-                                       placeholder="userName" name="userName" value="${user.userName}">
+                                       placeholder="userName" name="userName" value="${user.userName}" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="new_petName" class="col-sm-2 control-label">
-                                姓名： </label>
+                                宠物名字： </label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="new_petName"
                                        placeholder="petName" name="petName" value="${pet.petName}" readonly="readonly">
@@ -159,8 +160,10 @@
         </div>
 
         <div class="commentbox">
-            <textarea cols="80" rows="50" placeholder="来说几句吧" class="mytextarea" id="content"></textarea>
             <div class="btn btn-info pull-right" id="comment">评论</div>
+            <textarea cols="80" rows="50" placeholder="来说几句吧" class="mytextarea" id="content"></textarea>
+            <br/><br/><br/><br/><br/><br/><br/>
+
         </div>
     </div>
 </div>
@@ -342,6 +345,13 @@
 
     //点击新增按钮弹出模态框。
     $("#pet_adopt_modal_btn").click(function () {
+        $(function(){
+            var user = "<%= session.getAttribute("user")%>";
+            if(user=="null"){
+                alert("您还未登录，请登录！")
+                window.location.reload();
+            }
+        })
         //清除表单数据（表单完整重置（表单的数据，表单的样式））
         reset_form("#new_adopt_form");
         $("#new_id").val("${user.id}");
@@ -463,7 +473,6 @@
 
 </script>
 </body>
-<jsp:include page="foot.jsp"></jsp:include>
 </html>
 
 

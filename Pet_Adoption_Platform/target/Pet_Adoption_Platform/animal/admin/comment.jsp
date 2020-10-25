@@ -3,19 +3,20 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>学员关系管理系统CRM</title>
+    <title>宠物领养管理后台</title>
     <!-- 引入css样式文件 -->
     <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/metisMenu.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/dataTables.bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/js/houtai/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/houtai/css/boot-crm.css" rel="stylesheet" type="text/css">
     <style>
         .panel-heading {
             background-color: #337ab7;
@@ -85,22 +86,22 @@
 
                         </tbody>
                     </table>
-                    <div class="row">
-                        <!--分页文字信息  -->
-                        <div class="col-md-8" id="page_info_area"></div>
-                        <!-- 分页条信息 -->
-                        <div class="col-md-4" id="page_nav_area">
 
-                        </div>
-                    </div>
                     <!-- /.panel-body -->
                 </div>
                 <!-- /.panel -->
             </div>
             <!-- /.col-lg-12 -->
+            <div class="row">
+                <!--分页文字信息  -->
+                <div class="col-md-8" id="page_info_area"></div>
+                <!-- 分页条信息 -->
+                <div class="col-md-4" id="page_nav_area">
+
+                </div>
+            </div>
         </div>
     </div>
-    <!-- 班级列表查询部分  end-->
 </div>
 
 <!-- 修改评论模态框 -->
@@ -146,16 +147,16 @@
 </div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/JQuery/jquery-3.4.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/JQuery/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/metisMenu.min.js"></script>
 <!-- DataTables JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/houtai/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/dataTables.bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="${pageContext.request.contextPath}/js/houtai/js/sb-admin-2.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/houtai/js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
 
