@@ -28,10 +28,13 @@
         <h2>待领养的动物</h2>
         <center>
             <div id="demo1" class="slideBox">
-                <ul class="items">
+                <ul <%--class="items"--%> >
                     <c:forEach items="${pics}" var="pic">
                         <li>
-                            <a href=""><img class="my-img" src="/pic/${pic}"></a>
+                            <a href="">
+                                <%--<img class="my-img" src="/pic/${pic}">--%>
+                                <img class="my-img" src="/pic/${pic}" style="width: 450px;height: 300px">
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -66,9 +69,7 @@
             </div>
         </div>
         <div class="animal_me">
-            <%-- <div class="animal_me1"><img src="../images/p11.jpg"></div>--%>
             <div class="animal_me2"><p>大家好，我是${pet.petName}。${pet.remark}。你能带我回家吗？</p></div>
-            <%-- <div class="animal_me3"><img src="../images/p10.jpg"></div>--%>
         </div>
         <div class="my_btn">
             <button class="btn btn-primary btn-lg" id="pet_adopt_modal_btn" >申请领养</button>
@@ -263,8 +264,13 @@
                 replayListTd = $("<div></div>").addClass("reply-list");
                 $.each(answers, function (index, answer) {
                     var replaysTd = $("<div></div>").addClass("reply");
-                    var replay = $("<div></div>").append($("<a></a>").append(answer.user.userName)).append("回复：").append($("<a></a>").append(comment.user.userName).append("  ")).append($("<span></span>").append(answer.content));
-                    var contentTd = $("<p></p>").append($("<span></span>").append(answer.answerTime)).append($("<span></span>").addClass("reply-list-btn").append("回复").attr("saves-id", answer.id));
+                    var replay = $("<div></div>").append($("<a></a>")
+                        .append(answer.user.userName)).append("回复：")
+                        .append($("<a></a>").append(comment.user.userName)
+                            .append("  ")).append($("<span></span>").append(answer.content));
+                    var contentTd = $("<p></p>").append($("<span></span>")
+                        .append(answer.answerTime)).append($("<span></span>")
+                        .addClass("reply-list-btn").append("回复").attr("saves-id", answer.id));
                     replaysTd.append(replay).append(contentTd);
                     replayListTd.append(replaysTd);
                 });

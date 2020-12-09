@@ -261,8 +261,8 @@
                                 </label>
                                 <div class="col-sm-4">
                                     <select class="form-control" id="new_state" name="state">
-                                        <option value="0">有领养经历</option>
-                                        <option value="1">无领养经历</option>
+                                        <option value="0">无领养经历</option>
+                                        <option value="1">有领养经历</option>
                                     </select>
                                 </div>
                             </div>
@@ -356,8 +356,8 @@
                         </label>
                         <div class="col-sm-4">
                             <select class="form-control" id="edit_state" name="state" value="${user.state}">
-                                <option value="0">有领养经历</option>
-                                <option value="1">无领养经历</option>
+                                <option value="0">无领养经历</option>
+                                <option value="1">有领养经历</option>
                             </select>
                         </div>
                     </div>
@@ -432,7 +432,6 @@
 
     $("#user_register_btn").click(function () {
         var username = $("#new_userName").val();
-
         $.ajax({
             url: "${pageContext.request.contextPath}/user/create.action?username=" + username,
             type: "POST",

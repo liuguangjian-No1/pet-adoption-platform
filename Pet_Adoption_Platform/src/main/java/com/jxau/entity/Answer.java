@@ -1,10 +1,14 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+@Data
+@ToString
 public class Answer {
 
     private int id;
@@ -30,63 +34,5 @@ public class Answer {
         this.comment = comment;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getAnswerTime() {
-        return answerTime;
-    }
-
-    public void setAnswerTime(Date answerTime) {
-        this.answerTime = answerTime;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    public Answer getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
-    }
-
-    public Comment getComment() {
-        return comment;
-    }
-
-    public void setComment(Comment comment) {
-        this.comment = comment;
-    }
-
-    @Override
-    public String toString() {
-        return "Answer{" +
-                "id=" + id +
-                ", answerTime=" + answerTime +
-                ", content='" + content + '\'' +
-                ", user=" + user +
-                ", answer=" + answer +
-                ", comment=" + comment +
-                '}';
-    }
 }

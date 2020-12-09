@@ -32,7 +32,7 @@ public class AdminController {
         // 引入PageHelper分页插件
         // 在查询之前只需要调用，传入页码，以及每页的大小
         PageHelper.startPage(pn,4);
-        List<Admin> admins = adminService.getAdmins();
+        List< Admin> admins = adminService.getAdmins();
         // startPage后面紧跟的这个查询就是一个分页查询
         System.out.println(admins+"admins");
         // 使用pageInfo包装查询后的结果，只需要将pageInfo交给页面就行了。
@@ -48,7 +48,7 @@ public class AdminController {
         if(i>0){
             return Message.success();
         }else{
-            return Message.fail();
+             return Message.fail();
         }
     }
 
@@ -64,6 +64,7 @@ public class AdminController {
     }
 
 
+
     @RequestMapping("update.action")
     @ResponseBody
     public Message updateAdmin(Admin admin, MultipartFile file){
@@ -72,7 +73,7 @@ public class AdminController {
             admin.setPic(load);
         }
         int i = adminService.updateAdmin(admin);
-        if(i>0){
+        if (i>0){
             return Message.success();
         }else{
             return Message.fail();

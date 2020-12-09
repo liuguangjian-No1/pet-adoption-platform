@@ -1,11 +1,15 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
+@ToString
 public class Comment {
 
     private Integer id;
@@ -30,74 +34,5 @@ public class Comment {
         this.admin = admin;
         this.pet = pet;
         this.answer = answer;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getCommentTime() {
-        return commentTime;
-    }
-
-    public void setCommentTime(Date commentTime) {
-        this.commentTime = commentTime;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    public Admin getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(Admin admin) {
-        this.admin = admin;
-    }
-
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
-
-    public List<Answer> getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(List<Answer> answer) {
-        this.answer = answer;
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", commentTime=" + commentTime +
-                ", content='" + content + '\'' +
-                ", user=" + user +
-                ", admin=" + admin +
-                ", pet=" + pet +
-                ", answer=" + answer +
-                '}';
     }
 }

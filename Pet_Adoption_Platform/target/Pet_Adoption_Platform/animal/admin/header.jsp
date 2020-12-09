@@ -61,7 +61,7 @@
                 <li>
                     <input type="hidden" id="currentAdminId" value="${admin.id}">
                 </li>
-                <li>
+               <%-- <li>
                     <a href="${pageContext.request.contextPath}/admin/developing">
                         <i class="fa fa-user fa-fw"></i>
                         管理员：${admin.adminName}</a>
@@ -70,7 +70,7 @@
                     <a href="${pageContext.request.contextPath}/admin/developing">
                     <i class="fa fa-gear fa-fw"></i>
                         系统设置</a>
-                </li>
+                </li>--%>
                 <li class="divider"></li>
                 <li>
                     <a href="${pageContext.request.contextPath}/admin/logout.action">

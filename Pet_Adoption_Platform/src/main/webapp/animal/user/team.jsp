@@ -26,32 +26,31 @@
 <jsp:include page="navigation.jsp"></jsp:include>
 <!-- team -->
 <div class="team" id="team">
-    <div class="container">
-        <%
-            boolean isLogin = false;
-            Object user = request.getSession().getAttribute("user");
-            if (user != null) {
-                isLogin = true;
-            }
-            request.getSession().setAttribute("isLogin", isLogin);
-        %>
-
-        <c:if test="${sessionScope.isLogin}" var="flage" scope="session">
+    <%
+        boolean isLogin = false;
+        Object user = request.getSession().getAttribute("user");
+        if (user != null) {
+            isLogin = true;
+        }
+        request.getSession().setAttribute("isLogin", isLogin);
+    %>
+    <c:if test="${sessionScope.isLogin}" var="flage" scope="session">
+        <div class="container">
             <h3 class="agile-title">我们的团队</h3>
-            <div class="team-agileinfo">
-
-            </div>
-        </c:if>
-        <c:if test="${!flage}" var="flage" scope="session">
-            <h2>您还没有登录，无权查看团队信息，请点击右上角登录！</h2>
-        </c:if>
-    </div>
-    <!-- 显示分页信息 -->
-    <div class="row">
-        <div class="col-md-5"></div>
-        <!-- 分页条信息 -->
-        <div class="col-md-6" id="page_nav_area"></div>
-    </div>
+            <div class="team-agileinfo"></div>
+        </div>
+        <!-- 显示分页信息 -->
+        <div class="row">
+            <div class="col-md-5"></div>
+            <!-- 分页条信息 -->
+            <div class="col-md-6" id="page_nav_area"></div>
+        </div>
+    </c:if>
+    <c:if test="${!flage}" var="flage" scope="session">
+        <div style="text-align: center">
+            <h1 >您还没有登录，无权查看团队信息，请点击右上角登录！</h1>
+        </div>
+    </c:if>
 </div>
 
 
@@ -60,7 +59,7 @@
     <div class="container">
         <div class="col-md-9 col-sm-9 contact-right">
             <form id="save_apply_form">
-                <input type="text" id="new_name" name="name" placeholder="你的名字" >
+                <input type="text" id="new_name" name="name" placeholder="你的名字">
                 <input type="text" id="new_email" name="email" placeholder="你的邮件号">
                 <input type="text" id="new_age" name="age" placeholder="你的年龄">
                 <input type="text" id="new_telephone" name="telephone" placeholder="你的电话">
@@ -123,7 +122,6 @@
             }
         });
     }
-
 
 
     function build_admins_table(result) {

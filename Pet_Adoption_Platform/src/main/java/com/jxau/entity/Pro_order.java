@@ -1,7 +1,12 @@
 package com.jxau.entity;
 
+import lombok.Data;
+import lombok.ToString;
+
 import java.util.Date;
 
+@Data
+@ToString
 public class Pro_order {
     private Integer id;
     private Integer pro_id;
@@ -19,66 +24,6 @@ public class Pro_order {
         this.username = username;
         this.num = num;
         this.orderStatement = orderStatement;
-        this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Pro_order{" +
-                "id=" + id +
-                ", pro_id=" + pro_id +
-                ", username='" + username + '\'' +
-                ", num=" + num +
-                ", orderStatement='" + orderStatement + '\'' +
-                ", date=" + date +
-                '}';
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getPro_id() {
-        return pro_id;
-    }
-
-    public void setPro_id(Integer pro_id) {
-        this.pro_id = pro_id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Integer getNum() {
-        return num;
-    }
-
-    public void setNum(Integer num) {
-        this.num = num;
-    }
-
-    public String getOrderStatement() {
-        return orderStatement;
-    }
-
-    public void setOrderStatement(String orderStatement) {
-        this.orderStatement = orderStatement;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
         this.date = date;
     }
 }

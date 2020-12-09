@@ -29,7 +29,6 @@ public class UsersController {
     public Message getUsers(@RequestParam(value = "pn",defaultValue = "1") Integer pn){
         PageHelper.startPage(pn,6);
         List<Users> users = usersService.getUsers();
-        System.out.println(users);
         PageInfo page=new PageInfo(users,4);
         return Message.success().add("pageInfo",page);
     }
@@ -42,6 +41,7 @@ public class UsersController {
         if(usersService.findByUsername(username)!=null){
             return Message.fail();
         }
+
         if(usersService.addUser(users)>0){
             return Message.success();
         }else{

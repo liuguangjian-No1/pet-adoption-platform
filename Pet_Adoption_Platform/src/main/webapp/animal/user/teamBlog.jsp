@@ -27,7 +27,6 @@
 
             <div class="clearfix"></div>
         </div>
-
     </div>
 
     <!-- 显示分页信息 -->
@@ -36,9 +35,7 @@
         <!-- 分页条信息 -->
         <div class="col-md-6" id="page_nav_area"></div>
     </div>
-    <%--  <div class="blog-grids mid-blog-agile">
-          <img src="../images/bg3.jpg" class="img-responsive" alt="">
-      </div>--%>
+
 </div>
 
 <!-- Modal5 -->
@@ -99,8 +96,8 @@
             var titleTd = $("<h4></h4>").append($("<a></a>")).addClass("myfont").append(blog.title);
             titleTd.attr("id", "title_btn");
             titleTd.attr("title-id", blog.id);
-            var peopelsTd = $("<p></p>").append($("<a></a>")).append(blog.peoples);
-            blogTd.append(titleTd).append(peopelsTd);
+            /*var peopelsTd = $("<p></p>").append($("<a></a>")).append(blog.peoples);*/
+            blogTd.append(titleTd)/*.append(peopelsTd)*/;
             var clear = $("<div></div>").addClass("clearfix");
             //append方法执行完成以后还是返回原来的元素
             $("<div></div>").addClass("blog-full-wthree")

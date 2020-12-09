@@ -60,7 +60,7 @@
     </resultMap>
 
     <select id="getPets" resultType="pet">
-        SELECT * FROM pet ORDER BY birthday DESC
+        SELECT * FROM pet ORDER BY id asc
     </select>
 
     <!--select * from (pet left join t_adopt ON pet.id=pet_id) left join users on user_id=users.id where pet.state=#{state} group by  pet.id;-->

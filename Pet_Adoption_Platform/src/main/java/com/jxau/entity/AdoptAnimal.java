@@ -1,10 +1,14 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+@Data
+@ToString
 public class AdoptAnimal {
 
     private Integer id;
@@ -39,54 +43,5 @@ public class AdoptAnimal {
         this.user = user;
     }
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getAdoptTime() {
-        return adoptTime;
-    }
-
-    public void setAdoptTime(Date adoptTime) {
-        this.adoptTime = adoptTime;
-    }
-
-    public Integer getState() {
-        return state;
-    }
-
-    public void setState(Integer state) {
-        this.state = state;
-    }
-
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
-
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    @Override
-    public String toString() {
-        return "AdoptAnimal{" +
-                "id=" + id +
-                ", adoptTime=" + adoptTime +
-                ", state=" + state +
-                ", pet=" + pet +
-                ", user=" + user +
-                '}';
-    }
 }

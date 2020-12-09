@@ -1,11 +1,15 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
+@ToString
 public class Admin {
     private Integer id;
     private String adminName;
@@ -40,109 +44,4 @@ public class Admin {
         this.commentList = commentList;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getAdminName() {
-        return adminName;
-    }
-
-    public void setAdminName(String adminName) {
-        this.adminName = adminName;
-    }
-
-    public String getAdminPwd() {
-        return adminPwd;
-    }
-
-    public void setAdminPwd(String adminPwd) {
-        this.adminPwd = adminPwd;
-    }
-
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getPic() {
-        return pic;
-    }
-
-    public void setPic(String pic) {
-        this.pic = pic;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public List<Comment> getCommentList() {
-        return commentList;
-    }
-
-    public void setCommentList(List<Comment> commentList) {
-        this.commentList = commentList;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "id=" + id +
-                ", adminName='" + adminName + '\'' +
-                ", adminPwd='" + adminPwd + '\'' +
-                ", realName='" + realName + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", Email='" + Email + '\'' +
-                ", birthday=" + birthday +
-                ", sex='" + sex + '\'' +
-                ", pic='" + pic + '\'' +
-                ", remark='" + remark + '\'' +
-                ", commentList=" + commentList +
-                '}';
-    }
 }
