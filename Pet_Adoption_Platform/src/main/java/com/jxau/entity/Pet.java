@@ -1,7 +1,9 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -11,6 +13,8 @@ import java.util.List;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Pet {
 
     private Integer id;
@@ -28,7 +32,7 @@ public class Pet {
 
     private List<Comment> commentList=new ArrayList<>();
 
-
+/*
     public Pet() {
     }
 
@@ -43,5 +47,5 @@ public class Pet {
         this.remark = remark;
         this.adoptAnimalList = adoptAnimal;
         this.commentList = commentList;
-    }
+    }*/
 }

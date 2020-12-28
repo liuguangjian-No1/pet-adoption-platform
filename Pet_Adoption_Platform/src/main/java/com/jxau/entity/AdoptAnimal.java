@@ -1,7 +1,9 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -9,6 +11,8 @@ import java.util.Date;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class AdoptAnimal {
 
     private Integer id;
@@ -20,7 +24,7 @@ public class AdoptAnimal {
     private Pet pet;
     private Users user;
 
-    public AdoptAnimal() {
+/*    public AdoptAnimal() {
     }
 
     public AdoptAnimal(Date adoptTime, Integer state, Pet pet, Users user) {
@@ -41,7 +45,7 @@ public class AdoptAnimal {
         this.state = state;
         this.pet = pet;
         this.user = user;
-    }
+    }*/
 
 
 }

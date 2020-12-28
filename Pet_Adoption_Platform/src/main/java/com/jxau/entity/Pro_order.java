@@ -1,12 +1,16 @@
 package com.jxau.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Pro_order {
     private Integer id;
     private Integer pro_id;
@@ -15,7 +19,7 @@ public class Pro_order {
     private String orderStatement;
     private Date date;
 
-    public Pro_order() {
+/*    public Pro_order() {
     }
 
     public Pro_order(Integer id, Integer pro_id, String username, Integer num, String orderStatement, Date date) {
@@ -25,5 +29,5 @@ public class Pro_order {
         this.num = num;
         this.orderStatement = orderStatement;
         this.date = date;
-    }
+    }*/
 }

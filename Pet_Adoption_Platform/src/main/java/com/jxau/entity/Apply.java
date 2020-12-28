@@ -1,7 +1,9 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -9,6 +11,8 @@ import java.util.Date;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Apply {
 
     private Integer id;
@@ -22,7 +26,7 @@ public class Apply {
     private Date applyTime;
     private int state;
 
-    public Apply() {
+/*    public Apply() {
     }
 
     public Apply(Integer id, String name, String email, Integer age, String telephone, String message, Date applyTime, int state) {
@@ -34,5 +38,5 @@ public class Apply {
         this.message = message;
         this.applyTime = applyTime;
         this.state = state;
-    }
+    }*/
 }

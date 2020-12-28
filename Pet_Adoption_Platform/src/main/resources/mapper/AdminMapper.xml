@@ -18,7 +18,7 @@
 
     <update id="updateAdmin" parameterType="Admin">
         UPDATE admin SET adminName=#{adminName},adminPwd=#{adminPwd},realName=#{realName},telephone=#{telephone},
-                Email=#{Email},birthday=#{birthday},sex=#{sex},
+        Email=#{Email},birthday=#{birthday},sex=#{sex},
         <trim suffix=",">
             <if test="pic !=null and pic != ''">
                 pic=#{pic}
@@ -29,16 +29,16 @@
 
     <resultMap id="BaseAdminMap" type="Admin">
         <id column="id" property="id"></id>
-        <result column="adminName"  property="adminName"></result>
-        <result column="adminPwd"  property="adminPwd"></result>
-        <result column="realName"  property="realName"></result>
+        <result column="adminName" property="adminName"></result>
+        <result column="adminPwd" property="adminPwd"></result>
+        <result column="realName" property="realName"></result>
         <result column="telephone" property="telephone"></result>
         <result column="Email" property="Email"></result>
         <result column="birthday" property="birthday"></result>
         <result column="sex" property="sex"></result>
         <result column="pic" property="pic"></result>
         <result column="remark" property="remark"></result>
-        <collection property="commentList" ofType="comment" javaType="list" >
+        <collection property="commentList" ofType="comment" javaType="list">
             <id column="tid" property="id"></id>
             <result column="commentTime" property="commentTime"></result>
             <result column="content" property="content"></result>
@@ -69,10 +69,11 @@
     </select>
 
     <select id="findByName" resultMap="BaseAdminMap" parameterType="string">
-        SELECT admin.*,comment.id tid,comment.commentTime,comment.content FROM (admin  LEFT JOIN comment ON admin.id=comment.admin_id) LEFT JOIN pet ON comment.pet_id=pet.id
+        SELECT admin.*,comment.id tid,comment.commentTime,comment.content FROM (admin LEFT JOIN comment ON
+        admin.id=comment.admin_id) LEFT JOIN pet ON comment.pet_id=pet.id
         <where>
             <if test="adminName != null and adminName != '' ">
-             and admin.adminName LIKE "%"#{adminName}"%"
+                and admin.adminName LIKE "%"#{adminName}"%"
             </if>
         </where>
     </select>

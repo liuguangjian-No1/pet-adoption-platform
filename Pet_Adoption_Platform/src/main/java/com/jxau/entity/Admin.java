@@ -1,7 +1,9 @@
 package com.jxau.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -10,6 +12,8 @@ import java.util.List;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Admin {
     private Integer id;
     private String adminName;
@@ -23,10 +27,9 @@ public class Admin {
     private String sex;
     private String pic;
     private String remark;
-
     List<Comment> commentList;
 
-    public Admin() {
+/*    public Admin() {
     }
 
 
@@ -42,6 +45,6 @@ public class Admin {
         this.pic = pic;
         this.remark = remark;
         this.commentList = commentList;
-    }
+    }*/
 
 }

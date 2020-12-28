@@ -1,10 +1,14 @@
 package com.jxau.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
     private Integer id;
     private String proName;
@@ -14,7 +18,7 @@ public class Product {
     private Integer proNum;
     private String proPic;
 
-    public Product(Integer id, String proName, String proType, double proPrice, String proDesc, Integer proNum, String proPic) {
+/*    public Product(Integer id, String proName, String proType, double proPrice, String proDesc, Integer proNum, String proPic) {
         this.id = id;
         this.proName = proName;
         this.proType = proType;
@@ -24,5 +28,5 @@ public class Product {
         this.proPic = proPic;
     }
     public Product() {
-    }
+    }*/
 }
